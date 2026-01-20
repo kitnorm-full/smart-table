@@ -1,1 +1,1 @@
-# sp6-2_smart-table_starter
+https://github.com/kitnorm-full/smart-table.git
