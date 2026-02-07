@@ -13,6 +13,15 @@ export function initFiltering(elements) {
   };
 
   const applyFiltering = (query, state, action) => {
+    if (action && action.name === "clear") {
+      const element = Object.values(elements).find(
+        (el) => el.name === action.dataset.field,
+      );
+
+      if (element) {
+        element.value = "";
+      }
+    }
     const filter = {};
     Object.keys(elements).forEach((key) => {
       if (elements[key]) {
